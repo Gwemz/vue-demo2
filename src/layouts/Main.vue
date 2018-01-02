@@ -1,11 +1,11 @@
 <template>
     <div class="container">
-      <ul>
+      <!--<ul>
         <li>
-          <!--<v-link href="/">主页</v-link>
-          <v-link href="/about">关于我们</v-link>-->
+          <v-link href="/">主页</v-link>
+          <v-link href="/about">关于我们</v-link>
         </li>
-      </ul>
+      </ul>-->
       <slot></slot>
     </div>
 

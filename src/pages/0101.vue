@@ -1,6 +1,6 @@
 <template>
     <main-layout>
-        <p>0101 page</p>
+        <p>This is 0101 page</p>
     </main-layout>
 </template>
 
