@@ -1,6 +1,6 @@
 <template>
   <main-layout>
-    <p>About page</p>
+    <p>关于我们页</p>
   </main-layout>
 </template>
 
