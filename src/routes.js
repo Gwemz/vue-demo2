@@ -1,5 +1,6 @@
 export default {
   '/': 'Home',
+  'vue-demo2':'Home',
   '/about': 'About',
    '/0101': '0101',
    '/0102': '0102',
