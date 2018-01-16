@@ -105,4 +105,51 @@ const app = new Vue({
 // 现在，应用已经启动了！
 ```
 
+### 动态路由匹配
+把某种模式匹配到的路由映射到同一个组件。我们可以在vue-router的路由路径中使用[动态路径参数]达到这个效果。
+```
+const User = {
+  template : '<div></div>'
+}
 
+const router = new VueRouter({
+  router: [
+    // 动态路径参数 以冒号开头
+    {path:'/user/:id',componet:User}
+  ]
+})
+
+const User = {
+  template: '<div>User {{$route.params.id}}</div>'
+}
+```
+现在`/user/foo` 和 `/user/bar` 都将映射到相同的路由
+
+#### 响应路由参数的变化
+复用组件时，想对路由参数的变化做出响应的话，可以简单地watch(监测变化) `$route`对象：
+```
+const User = {
+  template: '...',
+  watch: {
+    '$route' (to, from){
+      // 对路由变化做出响应
+
+    }
+  }
+}
+
+2.2中`beforeRouteUpdate` 守卫:
+const User = {
+  template: '...',
+  beforeRouteUpdate (to ,from ,next){
+
+  }
+}
+```
+#### 高级匹配模式
+vue-router支持很多高级的匹配模式，例如：可选的动态路径参数、匹配零个或多个、一个或多个，甚至是自定义正则匹配; https://github.com/vuejs/vue-router/blob/next/examples/route-matching/app.js
+
+#### 匹配优先级
+同一路径匹配多个路由的情况时，匹配的优先级按照路由的定义顺序：谁先定义，谁的优先级就最高。
+
+### 嵌套路由
