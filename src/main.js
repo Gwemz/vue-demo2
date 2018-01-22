@@ -21,7 +21,7 @@ const router = new VueRouter({
   base: __dirname,
   routes: [
     { path: '/', component: Home },
-    { path: '/foo', component: Foo },
+    { path: '/foo', component: Foo }, 
     { path: '/bar', component: Bar },
     { path: '/main', component: Main }
   ]
@@ -31,17 +31,5 @@ const router = new VueRouter({
 // Make sure to inject the router.
 // Route components will be rendered inside <router-view>.
 new Vue({
-  router,
-  template: `
-    <div id="app">
-      <h1>Basic</h1>
-      <ul>
-        <li><router-link to="/">/</router-link></li>
-        <li><router-link to="/foo">/foo</router-link></li>
-        <li><router-link to="/bar">/bar</router-link></li>
-        <li><router-link to="/main">/main</router-link></li>
-      </ul>
-      <router-view class="view"></router-view>
-    </div>
-  `
+  router
 }).$mount('#app')
