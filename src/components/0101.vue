@@ -5,18 +5,18 @@
 </template>
 
 <style>
-p{
-    color: rgb(0, 255, 170);
+p {
+  color: rgb(0, 255, 170);
 }
 </style>
 
 
 <script>
-    import MainLayout from '../layouts/Main.vue'
+import MainLayout from "../layouts/Main.vue";
 
-    export default {
-        components: {
-            MainLayout
-        }
-    }
+export default {
+  components: {
+    MainLayout
+  }
+};
 </script>
